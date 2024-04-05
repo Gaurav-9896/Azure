@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "dist/JSON2HTMLFunc.js",
+            "use": "@vercel/node",
+            "config": { "includeFiles": ["dist/**"] }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(*)",
+            "dest": "dist/JSON2HTMLFunc.js"
+        }
+    ]
+}
